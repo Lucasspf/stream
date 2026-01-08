@@ -14,6 +14,11 @@ public class App2 {
 
         people
                 .stream()
+                .map(Person::name)
+                .map(String::toUpperCase)
+                .sorted()
+                .forEach(System.out::println);
+
     }
     record Person(String name ,int age ){
 
